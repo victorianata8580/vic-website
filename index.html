@@ -17,6 +17,7 @@
 
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       background-color: #9d8b7b;
@@ -24,31 +25,16 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .container img {
-      max-width: 100%;
-      height: auto;
-    }
-
     header img {
-      width: 50px;
+      width: 40px;
       height: auto;
     }
 
     nav {
       display: flex;
-      gap: 40px;
-    }
-
-    nav img {
-      width: 30px;
-      /* Lebar yang lebih kecil */
-      height: 30px;
-      /* Tinggi yang lebih kecil */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
     nav a {
@@ -62,25 +48,85 @@
       color: #f2d1c9;
     }
 
-    .social-icons {
-      justify-content: center;
-      gap: 20px;
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    table img {
+      max-width: 40px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    table img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px;
+      background-color: #9d8b7b;
     }
 
     .social-icons img {
+      width: 50px;
+      /* Lebar gambar */
+      height: auto;
+      /* Menjaga proporsi gambar */
       transition: transform 0.3s;
+      /* Efek hover */
     }
 
     .social-icons img:hover {
       transform: scale(1.1);
+      /* Efek membesar saat hover */
+    }
+
+
+    /* Media Query for smaller screens */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      table img {
+        max-width: 60px;
+      }
+
+      .container {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <nav>&nbsp;<img src="images/favicon.ico.png" alt="Logo" /></nav>
-    <nav width="100%" height="100%">
+    <img src="images/favicon.ico.png" alt="Logo">
+    <nav>
       <a href="index.html">Home</a>
       <a href="PROFILE.html">Profile</a>
       <a href="Portofolio.html">Portfolio</a>
@@ -90,30 +136,32 @@
 
   <div class="container">
     <div>
-      <img src="images/WELCOME (1).png" alt="Welcome" />
-      <img src="images/THIS IS MY SOCIAL MEDIA.png" alt="" />
+      <img src="images/WELCOME (1).png" alt="Welcome">
+      <img src="images/THIS IS MY SOCIAL MEDIA.png" alt="">
     </div>
 
     <table width="100%" border="0" bgcolor="#9d8b7b" style="text-align: center">
       <tbody>
         <tr>
-
-          <td width="50%" height="109" bgcolor="#9d8b7b" style="text-align: center" class="social-icons">
-            <a href="https://www.instagram.com/victorianatashaa/profilecard/?igsh=OHpjN3ZvNWs1Zjh2"><img
-                src="images/Untitled design (2).png" alt="" width="110" height="107" usemap="#Map" /></a>
+          <td class="social-icons">
+            <a href="https://www.instagram.com/victorianatashaa/profilecard/?igsh=OHpjN3ZvNWs1Zjh2">
+              <img src="images/Untitled design (2).png" alt="Instagram">
+            </a>
           </td>
-
-          <td bgcolor="#9d8b7b" style="text-align: center" class="social-icons">
-            <a href="https://www.tiktok.com/@victoria.natashaa?_t=8qZ27HtYdYw&_r=1"><img
-                src="images/Real TikTok Logo.jpeg.jpg" alt="" width="103" height="107" usemap="#Map2Map" /></a>
+          <td class="social-icons">
+            <a href="https://www.tiktok.com/@victoria.natashaa?_t=8qZ27HtYdYw&_r=1">
+              <img src="images/Real TikTok Logo.jpeg.jpg" alt="TikTok">
+            </a>
           </td>
         </tr>
-        
       </tbody>
     </table>
+    
+
   </div>
 
   <footer>
+    © 2024 Victoria's Website. All rights reserved.
   </footer>
 </body>
 
