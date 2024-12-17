@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Victoria's Website</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico.png">
   <style>
@@ -17,17 +17,20 @@
 
     header {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       background-color: #9d8b7b;
       padding: 10px 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header img {
-      width: 40px;
+      width: 50px;
       height: auto;
+      margin-bottom: 10px;
     }
 
     nav {
@@ -84,27 +87,23 @@
 
     .social-icons img {
       width: 50px;
-      /* Lebar gambar */
       height: auto;
-      /* Menjaga proporsi gambar */
       transition: transform 0.3s;
-      /* Efek hover */
     }
 
     .social-icons img:hover {
       transform: scale(1.1);
-      /* Efek membesar saat hover */
     }
-
 
     /* Media Query for smaller screens */
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        text-align: center;
+        padding: 10px;
       }
 
       nav {
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
       }
 
@@ -133,7 +132,7 @@
       <a href="AskMe.html">Ask Me</a>
     </nav>
   </header>
-
+  
   <div class="container">
     <div>
       <img src="images/WELCOME (1).png" alt="Welcome">
@@ -156,8 +155,6 @@
         </tr>
       </tbody>
     </table>
-    
-
   </div>
 
   <footer>
